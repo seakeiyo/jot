@@ -28,8 +28,8 @@
 			</p>
 		</div>
 	</div>
-
-	<div id="title" class="text-center mt-20 mb-20">
+	
+	<div id="title" class="text-center mt-20 mb-20"-->
 		<h1>Jot</h1>
 	</div>
 	
@@ -37,14 +37,20 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<textarea class="pad"></textarea>
+					<input class="title-text box" type="text" placeholder="Title">
+					<textarea class="pad box"></textarea>
 				</div>
 				<div class="col-md-6">
-					<textarea class="pad"></textarea>
+					<div class="visible-xs visible-sm">
+						<br><br>
+					</div>
+					<input class="title-text box" type="text" placeholder="Title">
+					<textarea class="pad box"></textarea>
 				</div>
 			</div>
 		</div>		
 	</div>
 
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 </body>
 </html>
