@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
-<!--[if lt IE 8]><html class="old-ie"><![endif]-->
-<!--[if gte IE 8]><!--><html class="no-js"><!--<![endif]-->
+<html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,20 +14,9 @@
 	<link rel="stylesheet" href="css/bootstrap_grid.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/bootstrap_visible.css">
-		
-	<script>!function(e){e.className=e.className.replace("no-js","")}(document.documentElement);</script>
 </head>
 
-<body>
-	<div id="warn-ie" hidden>
-		<div id="warn-ie-content" class="text-center mt-20">
-			<h2>Browser Not Supported</h2>
-			<p>
-				You are using an <b>outdated</b> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-			</p>
-		</div>
-	</div>
-	
+<body>	
 	<div id="title" class="text-center mt-20 mb-20"-->
 		<h1>Jot</h1>
 	</div>
@@ -37,20 +25,22 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<input class="title-text box" type="text" placeholder="Title">
-					<textarea class="pad box"></textarea>
+					<input id="title-1" class="title-text box" type="text" placeholder="Title">
+					<textarea id="note-1" class="note box"></textarea>
 				</div>
 				<div class="col-md-6">
 					<div class="visible-xs visible-sm">
 						<br><br>
 					</div>
-					<input class="title-text box" type="text" placeholder="Title">
-					<textarea class="pad box"></textarea>
+					<input id="title-2" class="title-text box" type="text" placeholder="Title">
+					<textarea id="note-2" class="note box"></textarea>
 				</div>
 			</div>
 		</div>		
 	</div>
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>

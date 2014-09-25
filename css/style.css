@@ -1,7 +1,7 @@
 /* font face */
 @font-face {
-    font-family: 'Encode Sans';
-    src: url('../font/encodesans-regular.woff') format('woff');
+    font-family: 'Raleway';
+    src: url('../font/raleway-regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
@@ -12,8 +12,8 @@
     font-style: italic;
 }*/
 @font-face {
-    font-family: 'Encode Sans';
-    src: url('../font/encodesans-bold.woff') format('woff');
+    font-family: 'Raleway';
+    src: url('../font/raleway-bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
@@ -86,23 +86,13 @@
 */
 
 html {
-	font-family:"Encode Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-family:"Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 	font-size:18px; background-color:#222; color:#f8f8f8; line-height:1.5; min-width:320px;	
 }
 a {text-decoration:none}
 h1, h2, h3, h4, h5, h6 {font-weight:400; margin:0}
 p {margin:0 0 15px 0}
 form {display:block}
-
-.old-ie #warn-ie {
-	display:block!important; position:fixed; width:100%; height:100%; min-width:100%; min-height:100%;
-	background: transparent;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000,endColorstr=#B2000000);
-	zoom: 1;
-	z-index:1000; color:#f8f8f8
-}
-#warn-ie-content {background-color:#111; padding:20px}
-#warn-ie a {text-decoration:underline}
 
 #title > h1{
 	font-size:48px;
@@ -113,15 +103,17 @@ form {display:block}
 	background-color: #1D3328;
 	color: #f8f8f8;
 	border:0;
+	margin:0;
 	padding: 10px;
 }
 
-.pad{
+.note{
 	resize:none;
 	background-color:#223B2E;
-	color: #f8f8f8;
-	border: 0;
-	padding: 10px;
+	color:#f8f8f8;
+	border:0;
+	margin:0;
+	padding:10px;
 	min-height:300px;
 }
 
