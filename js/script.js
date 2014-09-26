@@ -5,13 +5,14 @@
 		titleField1 = $('#title-1'),
 		noteTextArea = $('#note-1');
 		
-	$(titleField1).on('change keyup paste', function (e) {
+	$(titleField1).add(noteTextArea).on('change keyup paste', function (e) {
 		if(typeof(s) != 'undefined') clearTimeout(s);
 		
 		s = setTimeout(function(){		
 				$.post('php/save.php', {
 					titleFieldID: titleField1.attr('id'),
-					title: titleField1.val()
+					title: titleField1.val(),
+					content: noteTextArea.val()
 				}, function (data) {					
 					console.log(data);
 				});

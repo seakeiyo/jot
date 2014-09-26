@@ -1,3 +1,16 @@
+<?php
+	$db = new SQLite3('db/jot');
+	
+	$selectString = 'SELECT title, content FROM note WHERE id=1 LIMIT 1';
+	
+	$result = $db->query($selectString);
+	
+	$row = $result->fetchArray(SQLITE3_ASSOC);
+	
+	$title = $row['title'];
+	$content = $row['content'];
+?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -25,8 +38,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<input id="title-1" class="title-text box" type="text" placeholder="Title">
-					<textarea id="note-1" class="note box"></textarea>
+					<input id="title-1" class="title-text box" type="text" placeholder="Title" value="<?=$title?>">
+					<textarea id="note-1" class="note box"><?=$content?></textarea>
 				</div>
 				<div class="col-md-6">
 					<div class="visible-xs visible-sm">
