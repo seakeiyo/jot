@@ -1,16 +1,3 @@
-<?php
-	$db = new SQLite3('db/jot');
-	
-	$selectString = 'SELECT title, content FROM note WHERE id=1 LIMIT 1';
-	
-	$result = $db->query($selectString);
-	
-	$row = $result->fetchArray(SQLITE3_ASSOC);
-	
-	$title = $row['title'];
-	$content = $row['content'];
-?>
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -37,17 +24,22 @@
 	<div id="main" class="text-center">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
-					<input id="title-1" class="title-text box" type="text" placeholder="Title" value="<?=$title?>">
-					<textarea id="note-1" class="note box"><?=$content?></textarea>
+				<?php
+				$db = new SQLite3('db/jot');
+
+				$selectString = 'SELECT id, title, content FROM note';
+
+				$result = $db->query($selectString);
+
+				while($row = $result->fetchArray(SQLITE3_ASSOC)){
+				?>
+					<div class="col-md-6">				
+					<input id="title-<?=$row['id']?>" class="title-text box bind-evt bind-evt-title" data-id="<?=$row['id']?>" type="text" placeholder="Title" value="<?=$row['title']?>">
+					<textarea id="note-<?=$row['id']?>" class="note box bind-evt bind-evt-note" data-id="<?=$row['id']?>"><?=$row['content']?></textarea>		
 				</div>
-				<div class="col-md-6">
-					<div class="visible-xs visible-sm">
-						<br><br>
-					</div>
-					<input id="title-2" class="title-text box" type="text" placeholder="Title">
-					<textarea id="note-2" class="note box"></textarea>
-				</div>
+				<?php
+				}
+				?>
 			</div>
 		</div>		
 	</div>
