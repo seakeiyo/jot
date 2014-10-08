@@ -39,7 +39,7 @@
 		if(typeof(s) != 'undefined') clearTimeout(s);
 		
 		s = setTimeout(function(){		
-				$.post('php/save.php', {
+				$.post('app/save.php', {
 					titleFieldID: id,
 					title: $(title).val(),
 					content: $(content).val()
