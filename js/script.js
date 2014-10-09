@@ -1,6 +1,6 @@
 (function (d, w) {
 	var html = d.documentElement,
-		body = d.body,
+		body = d.body;
 	
 	$('.bind-evt').on('change keyup paste', function (e) {
 		var isTitle = $(this).hasClass('bind-evt-title'),
@@ -29,7 +29,7 @@
 				});
 		
 				console.log("saved");
-			},500);
-		});
+			},250);
+		
 	});
 })(document, window);
