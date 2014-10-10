@@ -14,6 +14,8 @@ $updateString = 'UPDATE note SET title="'.$title.'", content="'.$content.'" WHER
 
 $db = new SQLite3('../db/jot');
 
+$updateString = $db->escapeString($updateString);
+
 $db->query($updateString);
 
 $db->close();
@@ -23,5 +25,5 @@ $status = true;
 echo json_encode($status);
 
 function sanitize($string){
-	return htmlspecialchars(strip_tags($string), ENT_QUOTES);
+	return htmlspecialchars($string, ENT_QUOTES);
 }
