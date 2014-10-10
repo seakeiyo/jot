@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Jot</title>
 	
+	<link rel="icon" href="/favicon.ico">	
+	
 	<script src="//cdnjs.cloudflare.com/ajax/libs/pace/0.5.7/pace.js"></script>
 	<link rel="stylesheet" href="css/pace-theme-flat-top.css">
 	
