@@ -98,13 +98,19 @@ form {display:block}
 	font-size:48px;
 }
 
+.notepad{
+	position:relative;
+}
+
 .title-text{
 	font-size:20px;
+	font-weight:bold;
 	background-color: #1D3328;
 	color: #f8f8f8;
 	border:0;
 	margin:0;
-	padding: 10px;
+	height:50px;
+	padding:10px;
 }
 
 .note{
@@ -115,6 +121,40 @@ form {display:block}
 	margin:0 0 20px 0;
 	padding:10px;
 	min-height:300px;
+}
+
+.remove-button{
+	background-color:#830300;
+	color:#f8f8f8;
+	border:5px solid #1D3328;
+	border-radius:50%;	
+	background-clip:padding-box;
+	font-size:20px;
+	font-weight:bold;
+	display:none;
+	position:absolute;
+	top:-15px;
+	right:-15px;
+	padding:0 6px;
+	margin:0;
+}
+
+.notepad:hover > .remove-button{
+	display:block;
+}
+
+#add-button{
+	background-color:#4F5451;
+	color:#222;
+	font-size:256px;
+	height:360px;
+	border:0;
+	margin:0 0 20px 0;
+	padding:0px;
+}
+
+#add-button:hover{
+	background-color:#404543;
 }
 
 /* xs specific responsive-ness */

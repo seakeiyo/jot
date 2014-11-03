@@ -8,8 +8,6 @@ $content = $_POST['content'];
 $title = sanitize($title);
 $content = sanitize($content);
 
-$status = false;
-
 $updateString = 'UPDATE note SET title="'.$title.'", content="'.$content.'" WHERE id='.$id;
 
 $db = new SQLite3('../db/jot');
@@ -18,11 +16,9 @@ $updateString = $db->escapeString($updateString);
 
 $db->query($updateString);
 
-$db->close();
-	
-$status = true;
+$db->close();	
 
-echo json_encode($status);
+echo json_encode(true);
 
 function sanitize($string){
 	return htmlspecialchars($string, ENT_QUOTES);

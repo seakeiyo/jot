@@ -35,13 +35,19 @@
 
 				while($row = $result->fetchArray(SQLITE3_ASSOC)){
 				?>
-					<div class="col-md-6">				
-					<input id="title-<?=$row['id']?>" class="title-text box bind-evt bind-evt-title" data-id="<?=$row['id']?>" type="text" placeholder="Title" value="<?=$row['title']?>">
-					<textarea id="note-<?=$row['id']?>" class="note box bind-evt bind-evt-note" data-id="<?=$row['id']?>"><?=$row['content']?></textarea>		
+				<div class="col-md-6">
+					<div id="notepad-<?=$row['id']?>" class="notepad">
+						<button id="remove-<?=$row['id']?>" class="remove-button">&times;</button>
+						<input id="title-<?=$row['id']?>" class="title-text box bind-evt bind-evt-title" data-id="<?=$row['id']?>" type="text" placeholder="Title" value="<?=$row['title']?>">
+						<textarea id="note-<?=$row['id']?>" class="note box bind-evt bind-evt-note" data-id="<?=$row['id']?>"><?=$row['content']?></textarea>		
+					</div>
 				</div>
 				<?php
 				}
 				?>
+				<div class="col-md-6">					
+					<button id="add-button" class="box">+</button>
+				</div>
 			</div>
 		</div>		
 	</div>
